@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.di.gbl.controllers.InputController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+    </padding>
+    <HBox spacing="5.0">
+        <Label text="Name" />
+        <TextField fx:id="name" />
+      <Label fx:id="labelId" prefHeight="18.0" prefWidth="22.0" text="Id" />
+      <TextField fx:id="idE" editable="false" />
+    </HBox>
+    <HBox spacing="5.0">
+        <Label text="Second Name" />
+        <TextField fx:id="secondName" />
+    </HBox>
+    <HBox spacing="5.0">
+        <Label text="Birth Date" />
+      <DatePicker fx:id="birthDate" editable="false" />
+    </HBox>
+    <HBox spacing="5.0">
+        <Label text="Category" />
+        <ComboBox fx:id="category" layoutX="15.0" layoutY="33.0" prefWidth="90.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="A1" />
+                    <String fx:value="A2" />
+                    <String fx:value="B1" />
+                    <String fx:value="B2" />
+                    <String fx:value="C1" />
+                    <String fx:value="C2" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+    <HBox spacing="5.0">
+        <Button fx:id="save" onAction="#onButtonSaveClick" text="Save" />
+        <Button fx:id="exit" onAction="#onButtonExitClick" text="Exit" />
+    </HBox>
+</VBox>
